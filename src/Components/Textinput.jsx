@@ -4,8 +4,6 @@ import { Controller, useForm, useFormContext } from 'react-hook-form'
 
 function Textinput({ field }) {
     const { control } = useFormContext()
-    console.log(field.pattern)
-
 
     return (
 

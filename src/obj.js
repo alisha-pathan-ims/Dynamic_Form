@@ -9,7 +9,7 @@ const obj = [
         "title": "Must be alphabets a-z",
         "disable": false,
         "name": "name",
-        "pattern" : /^[A-Za-z ]+$/
+        "pattern": /^[A-Za-z ]+$/
     },
     {
         "label": "email",
@@ -19,7 +19,7 @@ const obj = [
         "disable": false,
         "title": "It must include @ and .com",
         "name": "email",
-        "pattern" : /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
+        "pattern": /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
 
     },
     {
@@ -38,7 +38,7 @@ const obj = [
         "disable": false,
         "name": "url",
         "placeholder": "Enter Url",
-        "title" : "ex :- http://example.com/path/page?query=1"
+        "title": "ex :- http://example.com/path/page?query=1"
     },
     {
         "label": "date",
@@ -46,6 +46,9 @@ const obj = [
         "required": true,
         "disable": false,
         "name": "date",
+        "minDate": new Date(), //for salary practice
+        // "maxDate": new Date() // for bdayte practice 
+        // range 
 
     },
     {
@@ -61,17 +64,19 @@ const obj = [
     },
 
     {
-        "label" : "checkbox",
-        "type" : "checkbox",
-        "checkbox" : [
-            { "label1" : "data1" , "value ": "data1" , "name" : "data1", "checked" : ""},
-            { "label2" : "data2" , "value ": "data2" , "name" : "data2", "checked" : ""},
-            { "label3" : "data3" , "value ": "data3" , "name" : "data3", "checked" : ""},
-            { "label4" : "data4" , "value ": "data4" , "name" : "data4", "checked" : ""}
+        "label": "checkbox",
+        "type": "checkbox",
+        "checkbox": [
+            { "label1": "data1", "value ": "data1", "name": "data1", "checked": "" },
+            { "label2": "data2", "value ": "data2", "name": "data2", "checked": "" },
+            { "label3": "data3", "value ": "data3", "name": "data3", "checked": "" },
+            { "label4": "data4", "value ": "data4", "name": "data4", "checked": "" }
         ],
         "required": true,
         "disable": false,
     },
+
+
 
 
 ]
