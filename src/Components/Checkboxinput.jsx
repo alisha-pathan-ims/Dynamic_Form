@@ -4,21 +4,21 @@ import { Checkbox } from "primereact/checkbox";
 
 function Checkboxinput({ field }) {
 
-    
+
     let { control } = useFormContext()
-    let { checkbox,label } = field
+    let { checkbox, label } = field
 
     return (
-        <div className='flex flex-wrap align-items-center gap-4'>
-        <div>
-            <label htmlFor={label} className='p-2' >{label}</label>
-        </div>
-            <div className='flex flex-wrap mx-2 gap-4 pb-2' >
+        <div className='flex flex-wrap align-items-center gap-4 m-3 mx-0'>
+            <div>
+                <label htmlFor={label} className='p-2' >{label}</label>
+            </div>
+            <div className='grid m-2 gap-4 pb-2' >
 
                 {
                     checkbox.map((val) => (
 
-                        <div key={val.name} className="flex align-items-center gap-3 ">
+                        <div key={val.name} className="flex col-3 align-items-center gap-3 m-1">
                             <Controller
                                 name={val.name}
                                 control={control}
@@ -33,12 +33,13 @@ function Checkboxinput({ field }) {
                                             checked={controllerField.value === val.label}
 
                                         ></Checkbox>
-                                        <label htmlFor={val.name} className='pt-2 '>{val.label}</label>
+                                        <label htmlFor={val.name} className='pt-1/2 '>{val.label}</label>
                                     </>
                                 )}
 
                                 key={val.name}
                             />
+
 
                         </div>
                     ))

@@ -66,12 +66,12 @@ const obj = [
     {
         "label": "checkbox",
         "type": "checkbox",
-        
         "checkbox": [
             { "label": "label1", "value ": "value1", "name": "name1", "checked": Boolean },
             { "label": "label2", "value ": "value2", "name": "name2", "checked": Boolean },
             { "label": "label3", "value ": "value3", "name": "name3", "checked": Boolean },
-            { "label": "label4", "value ": "value4", "name": "name4", "checked": Boolean }
+            { "label": "label4", "value ": "value4", "name": "name4", "checked": Boolean },
+            
         ],
         "required": true,
         "disable": false,
