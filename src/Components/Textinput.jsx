@@ -1,4 +1,5 @@
 import { InputText } from 'primereact/inputtext'
+import { FloatLabel } from "primereact/floatlabel";
 import React from 'react'
 import { Controller, useForm, useFormContext } from 'react-hook-form'
 
@@ -23,14 +24,19 @@ function Textinput({ field }) {
 
                 }}
                 render={({ field: controllerField }) => (
-                    <InputText
-                        {...controllerField}
-                        id={field.name}
-                        type={field.type}
-                        value={field.value}
-                        placeholder={field.placeholder}
-                        disabled={field.disable}
-                    />
+
+                    <FloatLabel className="mb-5 w-full mx-0">
+
+                        <InputText
+                            {...controllerField}
+                            id={field.name}
+                            type={field.type}
+                            placeholder={field.placeholder}
+                            disabled={field.disable}
+                            style={{ "width": "100%" }}
+                        />
+                        <label htmlFor={field.label} >{field.name}</label>
+                    </FloatLabel>
                 )}
             />
 

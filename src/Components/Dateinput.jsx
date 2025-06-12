@@ -15,7 +15,7 @@ function Dateinput({ field }) {
 
 
     return (
-        <>
+        <div>
             <Controller
                 name={field.name}
                 control={control}
@@ -24,11 +24,11 @@ function Dateinput({ field }) {
                 render={({ field: controllerField }) => (
 
                     // <Calendar {...controllerField} minDate={minDate} maxDate={field.maxDate} readOnlyInput placeholder="dd/mm/yyyy" dateFormat="dd/mm/yy" showIcon /> //bdate
-                    <Calendar {...controllerField} minDate={field.minDate} readOnlyInput placeholder="dd/mm/yyyy" dateFormat="dd/mm/yy" showIcon /> //salary purpose
+                    <Calendar {...controllerField} minDate={field.minDate} readOnlyInput placeholder="dd/mm/yyyy" dateFormat="dd/mm/yy" showIcon className='w-full mb-5' /> //salary purpose
 
                 )}
             />
-        </>
+        </div>
     )
 
 }

@@ -1,12 +1,12 @@
-*{
+* {
     box-sizing: border-box;
-    
+
 }
-.container{
+
+.container {
     display: grid;
     max-width: 700px;
     margin: auto;
 }
-.container *{
-    margin: 6px 0;
-}
+
+.container div {}

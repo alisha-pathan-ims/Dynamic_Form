@@ -1,4 +1,4 @@
-import Checkbox from "./Components/Checkbox"
+// import Checkbox from "./Components/Checkboxinput"
 
 const obj = [
     {
@@ -66,11 +66,12 @@ const obj = [
     {
         "label": "checkbox",
         "type": "checkbox",
+        
         "checkbox": [
-            { "label1": "data1", "value ": "data1", "name": "data1", "checked": Boolean },
-            { "label2": "data2", "value ": "data2", "name": "data2", "checked": Boolean },
-            { "label3": "data3", "value ": "data3", "name": "data3", "checked": Boolean },
-            { "label4": "data4", "value ": "data4", "name": "data4", "checked": Boolean }
+            { "label": "label1", "value ": "value1", "name": "name1", "checked": Boolean },
+            { "label": "label2", "value ": "value2", "name": "name2", "checked": Boolean },
+            { "label": "label3", "value ": "value3", "name": "name3", "checked": Boolean },
+            { "label": "label4", "value ": "value4", "name": "name4", "checked": Boolean }
         ],
         "required": true,
         "disable": false,

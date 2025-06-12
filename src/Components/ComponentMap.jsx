@@ -2,7 +2,7 @@ import React from "react";
 import Textinput from "./Textinput";
 import Textareainput from "./Textareainput";
 import Dateinput from "./Dateinput";
-import Checkbox from "./Checkbox";
+import Checkboxinput from "./Checkboxinput";
 
 // You can extend this object anytime
 const componentMap = {
@@ -13,7 +13,7 @@ const componentMap = {
     url: Textinput,
     textarea: Textareainput,
     date: Dateinput,
-    checkbox: Checkbox
+    checkbox: Checkboxinput
 };
 
 export default function ComponentMap({ field }) {
