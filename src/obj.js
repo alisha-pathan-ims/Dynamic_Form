@@ -51,6 +51,7 @@ const obj = [
         // range 
 
     },
+
     {
         "label": "Address",
         "type": "textarea",
@@ -64,14 +65,15 @@ const obj = [
     },
 
     {
-        "label": "checkbox",
+        "label": "Information",
         "type": "checkbox",
+        "name": "Information",
         "checkbox": [
-            { "label": "label1", "value ": "value1", "name": "name1", "checked": Boolean },
-            { "label": "label2", "value ": "value2", "name": "name2", "checked": Boolean },
-            { "label": "label3", "value ": "value3", "name": "name3", "checked": Boolean },
-            { "label": "label4", "value ": "value4", "name": "name4", "checked": Boolean },
-            
+            { "id": "1", "label": "label1", "value ": "value1", "name": "name1", "checked": Boolean },
+            { "id": "2", "label": "label2", "value ": "value2", "name": "name2", "checked": Boolean },
+            { "id": "3", "label": "label3", "value ": "value3", "name": "name3", "checked": Boolean },
+            { "id": "4", "label": "label4", "value ": "value4", "name": "name4", "checked": Boolean },
+
         ],
         "required": true,
         "disable": false,

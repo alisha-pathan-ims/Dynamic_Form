@@ -13,7 +13,7 @@ const componentMap = {
     url: Textinput,
     textarea: Textareainput,
     date: Dateinput,
-    checkbox: Checkboxinput
+    checkbox: Checkboxinput,
 };
 
 export default function ComponentMap({ field }) {

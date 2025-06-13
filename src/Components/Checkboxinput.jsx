@@ -1,52 +1,54 @@
-import React, { useState } from 'react'
-import { Controller, useFormContext } from 'react-hook-form';
-import { Checkbox } from "primereact/checkbox";
+import React from 'react'
+import { Controller, useFormContext } from 'react-hook-form'
+import { Checkbox } from 'primereact/checkbox'
 
 function Checkboxinput({ field }) {
-
-
-    let { control } = useFormContext()
-    let { checkbox, label } = field
+    const { control } = useFormContext()
+    const { checkbox, label, name } = field
 
     return (
         <div className='flex flex-wrap align-items-center gap-4 m-3 mx-0'>
             <div>
-                <label htmlFor={label} className='p-2' >{label}</label>
+                <label htmlFor={label} className='p-2'>{label}</label>
             </div>
-            <div className='grid m-2 gap-4 pb-2' >
+            <div className='grid m-2 gap-4 pb-2'>
+                <Controller
+                    name={name}
+                    control={control}
+                    defaultValue={[]}
+                    render={({ field: controllerField }) => (
+                        <>
+                            {checkbox.map((val) => {
+                                const isChecked = controllerField.value.some(obj => obj.id === val.id)
 
-                {
-                    checkbox.map((val) => (
+                                const toggleValue = () => {
+                                    if (isChecked) {
+                                        controllerField.onChange(
+                                            controllerField.value.filter(obj => obj.id !== val.id)
+                                        )
+                                    } else {
+                                        controllerField.onChange([
+                                            ...controllerField.value,
+                                            { id: val.id }
+                                        ])
+                                    }
+                                }
 
-                        <div key={val.name} className="flex col-3 align-items-center gap-3 m-1">
-                            <Controller
-                                name={val.name}
-                                control={control}
-                                defaultValue={''}
-                                render={({ field: controllerField }) => (
-                                    <>
+                                return (
+                                    <div key={val.id} className="flex col-3 align-items-center gap-3 m-1">
                                         <Checkbox
                                             inputId={val.name}
-                                            onChange={(e) => {
-                                                controllerField.onChange(e.checked ? val.label : '');
-                                            }}
-                                            checked={controllerField.value === val.label}
-
-                                        ></Checkbox>
-                                        <label htmlFor={val.name} className='pt-1/2 '>{val.label}</label>
-                                    </>
-                                )}
-
-                                key={val.name}
-                            />
-
-
-                        </div>
-                    ))
-                }
-
-            </div >
-
+                                            onChange={toggleValue}
+                                            checked={isChecked}
+                                        />
+                                        <label htmlFor={val.name}>{val.label}</label>
+                                    </div>
+                                )
+                            })}
+                        </>
+                    )}
+                />
+            </div>
         </div>
     )
 }

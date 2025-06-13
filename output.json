@@ -1,30 +1,21 @@
 {
   "outcome": [
     {
-      "id": "dce5",
+      "id": "6699",
       "name": "alisha pathan",
       "email": "alishapathan401@gmail.com",
-      "password": "dfsdf",
+      "password": "dfsdfsd",
       "url": "https://chat.deepseek.com/a/chat/s/be04c3cd-d1aa-485d-911c-c7fd87a7e896",
-      "date": "2025-06-22T18:30:00.000Z",
+      "date": "2025-06-15T18:30:00.000Z",
       "address": "E-527 nr water tank Juhapura ahmedabad",
-      "name1": "",
-      "name2": "label2",
-      "name3": "",
-      "name4": ""
-    },
-    {
-      "id": "896e",
-      "name": "alisha pathan",
-      "email": "alishapathan401@gmail.com",
-      "password": "ergrete",
-      "url": "https://chat.deepseek.com/a/chat/s/be04c3cd-d1aa-485d-911c-c7fd87a7e896",
-      "date": "2025-06-12T18:30:00.000Z",
-      "address": "E-527 nr water tank Juhapura ahmedabad",
-      "name1": "label1",
-      "name2": "label2",
-      "name3": "label3",
-      "name4": ""
+      "Information": [
+        {
+          "id": "1"
+        },
+        {
+          "id": "2"
+        }
+      ]
     }
   ]
 }
